@@ -1,0 +1,22 @@
+{
+  "name": "hashweb-extension",
+  "version": "1.0.0",
+  "description": "HashWeb Browser Extension - Secure Encryption | SHA-256",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Extension ready for development'",
+    "zip": "npm run zip:chrome && npm run zip:firefox",
+    "zip:chrome": "zip -r extension-chrome.zip manifest.json background.js content.js popup.html popup.css popup.js icons/ -x \"*.md\"",
+    "zip:firefox": "zip -r extension-firefox.zip manifest.json background.js content.js popup.html popup.css popup.js icons/ -x \"*.md\""
+  },
+  "keywords": [
+    "file-sharing",
+    "encryption",
+    "privacy",
+    "security",
+    "ephemeral",
+    "self-destructing"
+  ],
+  "author": "HashWeb Team",
+  "license": "MIT"
+}

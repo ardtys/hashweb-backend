@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HashWeb - Secure Encryption</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <h1>🔷 HashWeb</h1>
+        <p class="tagline">Secure Encryption | SHA-256</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <button id="capture-screenshot" class="action-btn primary">
+          <span class="icon">📸</span>
+          <span>Capture Screenshot</span>
+        </button>
+        <button id="share-clipboard" class="action-btn">
+          <span class="icon">📋</span>
+          <span>Share Clipboard</span>
+        </button>
+      </div>
+
+      <!-- Text Input -->
+      <div class="input-section">
+        <textarea
+          id="text-input"
+          placeholder="Type or paste text to share..."
+          rows="5"
+        ></textarea>
+
+        <!-- File Upload -->
+        <div class="file-upload">
+          <input type="file" id="file-input" multiple hidden>
+          <label for="file-input" class="file-label">
+            <span class="icon">📁</span>
+            <span id="file-label-text">Choose files or drop here</span>
+          </label>
+          <div id="file-list" class="file-list"></div>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="options">
+        <label class="option">
+          <input type="radio" name="expiry" value="views" checked>
+          <span>Burn after</span>
+          <input type="number" id="views-count" value="1" min="1" max="100">
+          <span>views</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="expiry" value="time">
+          <span>Expire in</span>
+          <input type="number" id="time-minutes" value="60" min="1" max="360">
+          <span>minutes</span>
+        </label>
+      </div>
+
+      <!-- Share Button -->
+      <button id="share-btn" class="share-btn" disabled>
+        <span id="share-btn-text">Create Secure Link</span>
+        <span id="share-btn-loader" class="loader" hidden>⏳</span>
+      </button>
+
+      <!-- Result -->
+      <div id="result" class="result" hidden>
+        <div class="result-header">
+          <span class="icon">✅</span>
+          <span>Link Created!</span>
+        </div>
+        <div class="result-link">
+          <input type="text" id="result-url" readonly>
+          <button id="copy-btn" class="copy-btn">
+            <span id="copy-icon">📋</span>
+          </button>
+        </div>
+        <div class="result-qr" id="qr-code"></div>
+        <button id="new-share-btn" class="action-btn">New Share</button>
+      </div>
+
+      <!-- Settings -->
+      <div class="settings">
+        <details>
+          <summary>⚙️ Settings</summary>
+          <div class="settings-content">
+            <label>
+              Server URL:
+              <input type="url" id="server-url" placeholder="http://localhost:3002">
+            </label>
+            <button id="save-settings" class="action-btn">Save</button>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://github.com/ardtys/HashWeb" target="_blank">GitHub</a>
+      <span>•</span>
+      <a href="http://localhost:3002" target="_blank">Website</a>
+    </footer>
+  </div>
+
+  <script src="crypto.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

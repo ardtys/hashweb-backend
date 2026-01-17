@@ -1,0 +1,21 @@
+# Local development with Upstash Redis
+version: '3.8'
+
+services:
+  app:
+    build: .
+    environment:
+      - REDIS=rediss://default:AWRAAAIncDFhYmI3M2RkMzgxNDk0YzNiOWM2NzMxOTg1NzYwMTAzY3AxMjU2NjQ@together-liger-25664.upstash.io:6379
+      - SIZE_LIMIT=10MiB
+      - VERBOSITY=debug
+      - FRONTEND_PATH=./frontend
+    ports:
+      - "3000:8000"
+    restart: unless-stopped
+
+    healthcheck:
+      test: ['CMD', 'curl', '--fail', 'http://127.0.0.1:8000/api/live/']
+      interval: 1m
+      timeout: 3s
+      retries: 2
+      start_period: 10s

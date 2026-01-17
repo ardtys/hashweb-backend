@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "allowSyntheticDefaultImports": true
+  }
+}
