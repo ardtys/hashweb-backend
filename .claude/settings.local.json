@@ -72,7 +72,9 @@
       "Bash(cp:*)",
       "Bash(find:*)",
       "Bash(cat:*)",
-      "Bash(pnpm dev)"
+      "Bash(pnpm dev)",
+      "Bash(redis-cli:*)",
+      "Bash(ls:*)"
     ]
   }
 }

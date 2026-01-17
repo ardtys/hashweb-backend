@@ -5,7 +5,7 @@ echo ========================================
 echo.
 
 echo [1/5] Setting Redis Secret with TLS...
-fly secrets set REDIS="rediss://default:ATywAAIncDIwNTk2ODJjNmNmYTg0OTczYjEzZTdiMjJkOGFkMzAwOHAyMTU1MzY@flying-crappie-15536.upstash.io:6379" --app hashweb
+fly secrets set REDIS="rediss://default:ARkMAAImcDI1NmM2OTI5NDcwMjc0NWUyYmJiYWFhZjY1YTI1YTg3OXAyNjQxMg@innocent-lamprey-6412.upstash.io:6379" --app hashweb
 if %errorlevel% neq 0 (
     echo ERROR: Failed to set REDIS secret
     pause
