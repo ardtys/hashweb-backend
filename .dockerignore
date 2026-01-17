@@ -13,3 +13,15 @@
 **/build
 **/.svelte
 **/.svelte-kit
+
+# Deployment scripts
+*.sh
+*.bat
+
+# Claude files
+.claude/
+
+# Git files
+.git/
+.gitignore
+.gitattributes

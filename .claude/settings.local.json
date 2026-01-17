@@ -74,7 +74,18 @@
       "Bash(cat:*)",
       "Bash(pnpm dev)",
       "Bash(redis-cli:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(fly secrets list:*)",
+      "Bash(fly apps restart:*)",
+      "Bash(fly machine start:*)",
+      "Bash(fly deploy:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(fly machine list:*)",
+      "Bash(fly machine stop:*)",
+      "Bash(fly machine status:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
